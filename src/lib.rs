@@ -1,10 +1,10 @@
-#![feature(asm)]
-
 #[doc(hidden)]
 pub use real_c_string::real_c_string as marker_name;
 pub use vmprotect_macros::protected as protect;
 #[doc(hidden)]
 pub use vmprotect_sys;
+
+use std::arch::asm;
 
 #[cfg(feature = "licensing")]
 pub mod licensing;
