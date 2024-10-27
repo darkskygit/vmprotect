@@ -1,10 +1,10 @@
+use std::arch::asm;
+
 #[doc(hidden)]
 pub use real_c_string::real_c_string as marker_name;
 pub use vmprotect_macros::protected as protect;
 #[doc(hidden)]
 pub use vmprotect_sys;
-
-use std::arch::asm;
 
 #[cfg(feature = "licensing")]
 pub mod licensing;
@@ -82,7 +82,7 @@ macro_rules! protected {
         )}
     }};
     (cwstr $x: literal) => {{
-        unsafe {$crate::strings::encrypted_a::EncryptedStringW::new(
+        unsafe {$crate::strings::encrypted_w::EncryptedStringW::new(
             $crate::marker_name!($x),
         )}
     }};
