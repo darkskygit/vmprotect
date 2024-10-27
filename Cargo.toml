@@ -15,10 +15,10 @@ service = []
 
 [dependencies]
 real_c_string = "1.0"
-widestring = "0.4.3"
-bitflags = "1.2"
-enum_primitive = "0.1.1"
-num-traits = "0.2.14"
+widestring = "0.5"
+bitflags = "1.3"
+enum_primitive = "0.1"
+num-traits = "0.2"
 chrono = "0.4.19"
 vmprotect-sys = { path = "vmprotect-sys", version = "0.1.1" }
 vmprotect-macros = { path = "vmprotect-macros", version = "0.1.0" }
